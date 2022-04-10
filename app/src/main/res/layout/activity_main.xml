@@ -72,7 +72,7 @@
                         android:typeface="monospace" />
 
                     <TextView
-                        android:id="@+id/D_Date"
+                        android:id="@+id/D_Date_Hour"
                         android:layout_width="205dp"
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
@@ -106,7 +106,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         app:srcCompat="@drawable/ic_launcher_foreground"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        tools:srcCompat="@drawable/ic_launcher_foreground" />
 
                 </RelativeLayout>
 
