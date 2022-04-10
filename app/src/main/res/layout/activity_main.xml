@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_gradient_background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:scrollbars="none"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="1dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/SideMenu"
+                    android:layout_width="54dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    app:srcCompat="@android:drawable/ic_menu_add"
+                    tools:srcCompat="@android:drawable/ic_menu_add" />
+
+                <TextView
+                    android:layout_width="271dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35dp"
+                    android:gravity="center"
+                    android:text="Weather Forecast"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:typeface="monospace" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/white_card"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:text="Today"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="34sp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/D_Date"
+                        android:layout_width="205dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="Monday, 4 mars"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:typeface="normal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp">
+
+                    <TextView
+                        android:id="@+id/D_Temp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="30\u2103"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="50sp"
+                        android:typeface="monospace" />
+
+                    <ImageView
+                        android:id="@+id/D_description"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/ic_launcher_foreground"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/location" />
+
+                    <TextView
+                        android:id="@+id/D_Location"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="kucukcekmece, Istanbul, Turkey 34290"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:typeface="monospace" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:text="Today"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:text="Tomorrow"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="121dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="177dp"
+                        android:gravity="center"
+                        android:text="Next 7 Days"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="21sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/white_card"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="27dp"
+                                android:text="10 AM"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:text="30\u2103"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/white_card">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="27dp"
+                                android:text="10 AM"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:text="30\u2103"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/white_card">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="27dp"
+                                android:text="10 AM"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:text="30\u2103"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/white_card">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="27dp"
+                                android:text="10 AM"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:text="30\u2103"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/white_card">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="27dp"
+                                android:text="10 AM"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:text="30\u2103"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/white_card">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="27dp"
+                                android:text="10 AM"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_alignParentBottom="true"
+                                android:text="30\u2103"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dark_card"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Chance of rain"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="81dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="33dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center"
+                                android:text="Rainy"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="33dp"
+                                android:layout_marginBottom="1dp"
+                                android:gravity="center"
+                                android:text="Sunny"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="33dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Heavy"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="290dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/ic_launcher_foreground" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:text="7 AM"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"/>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dark_card">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/btn_star_big_on"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
