@@ -91,14 +91,14 @@
 
                     <TextView
                         android:id="@+id/D_Temp"
-                        android:layout_width="110dp"
+                        android:layout_width="160dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="30\u2103"
-                        android:textAlignment="center"
+                        android:textAlignment="viewStart"
                         android:textColor="@color/white"
                         android:textSize="50sp"
-                        android:typeface="monospace" />
+                        android:typeface="normal" />
 
                     <ImageView
                         android:id="@+id/D_description"
@@ -134,8 +134,8 @@
                         android:text="kucukcekmece, Istanbul, Turkey 34290"
                         android:textAlignment="viewStart"
                         android:textColor="@color/white"
-                        android:textSize="12sp"
-                        android:typeface="monospace" />
+                        android:textSize="14sp"
+                        android:typeface="normal" />
                 </RelativeLayout>
 
             </LinearLayout>
@@ -155,7 +155,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
                         android:gravity="center"
                         android:text="Today"
                         android:textAlignment="viewStart"
@@ -165,7 +164,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="25dp"
                         android:gravity="center"
                         android:text="Tomorrow"
                         android:textAlignment="viewStart"
@@ -175,7 +174,7 @@
                     <TextView
                         android:layout_width="121dp"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="177dp"
+                        android:layout_marginStart="25dp"
                         android:gravity="center"
                         android:text="Next 7 Days"
                         android:textAlignment="viewStart"
